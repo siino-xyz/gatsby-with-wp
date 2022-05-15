@@ -1,54 +1,36 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# このタスクのゴール
 
-## 🚀 Quick start
+Gatsby×WordPress で、シンプルなブログサイトを構築する。
 
-1.  **Create a Gatsby site.**
+- 静的なトップページ
+- ページネート可能な記事一覧ページ
+- 記事ページ
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+上記 3 ページの実装完了をゴールとする。
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## 締め切り
 
-2.  **Start developing.**
+2022/05/16/11:00AM
 
-    Navigate into your new site’s directory and start it up.
+## 概要
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+- Gatsby×WordPress で簡単なブログサイトのデモを作成する
+- 今回は、カテゴリ・タグなどの絞り込み実装は行わない
+- 作るページ
+  - 静的ページ
+    - トップページ
+  - 動的ページ
+    - 記事一覧ページ
+      - ページネーション実装
+    - 記事ページ
+      - 前の記事/次の記事を実装
+- 作業の要点
+  - 動的ページの生成が作業の要点
+    - Gatsby.js の場合は、gatsby-node.js というファイルに、動的ページ生成の処理を書いていくことになる。
+    - gatsby-node.js では、非同期でクエリを取得し、ページを生成している
 
-3.  **Open the code and start customizing!**
+## MEMO
 
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- gatsby-node.js は何をやっているのか？
+  - createPages API を用いて、動的なページを生成している（詳しくは以下参照）
+  [Sourcing from WordPress](https://www.gatsbyjs.com/docs/how-to/sourcing-data/sourcing-from-wordpress/#using-wordpress-data)
