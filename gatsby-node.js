@@ -25,6 +25,8 @@ const createIndividualBlogPostPages = async ({ posts, gatsbyUtilities }) =>
 
         context: {
           id: post.id,
+          previousPostId: previous ? previous.id : null,
+          nextPostId: next ? next.id : null,
         },
       })
     )

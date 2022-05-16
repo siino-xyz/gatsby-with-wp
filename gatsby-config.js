@@ -14,5 +14,9 @@ module.exports = {
         typePrefix: `Wp`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-react-helmet`,
   ],
 };

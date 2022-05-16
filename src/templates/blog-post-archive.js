@@ -19,7 +19,9 @@ const BlogIndex = ({
           <li key={post.uri}>
             <article>
               <header>
-                <h2>{parse(post.title)}</h2>
+                <h2>
+                  <Link to={post.uri}>{parse(post.title)}</Link>
+                </h2>
                 <small>{post.date}</small>
               </header>
               <section>{parse(post.excerpt)}</section>
