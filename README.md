@@ -33,4 +33,4 @@ Gatsby×WordPress で、シンプルなブログサイトを構築する。
 
 - gatsby-node.js は何をやっているのか？
   - createPages API を用いて、動的なページを生成している（詳しくは以下参照）
-  [Sourcing from WordPress](https://www.gatsbyjs.com/docs/how-to/sourcing-data/sourcing-from-wordpress/#using-wordpress-data)
+    [Sourcing from WordPress](https://www.gatsbyjs.com/docs/how-to/sourcing-data/sourcing-from-wordpress/#using-wordpress-data)
